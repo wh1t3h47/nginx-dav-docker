@@ -1,0 +1,8 @@
+services:
+  webdav:
+    image: nginx:alpine
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./webdav:/var/webdav
