@@ -5,4 +5,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./webdav:/var/webdav
+      - ./webdav/:/var/webdav
+    command: [/usr/local/nginx/sbin/nginx, '-g', 'daemon off;']
+
+# Nota de CyberSec A pasta 'webdav' local é propriedade coletiva!
